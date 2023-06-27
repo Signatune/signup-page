@@ -1,12 +1,65 @@
-body {
-  display: flex;
+@font-face {
+  font-family: norse-bold;
+  src: url(fonts/norse-bold-webfont.woff);
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
 }
 
 .banner {
   flex: 1 1 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  padding-bottom: 15px;
+  background: no-repeat url("ferns.jpeg");
+  background-size: cover;
+}
+
+.text-container > img {
+  height: 5rem;
+  width: auto;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: norse-bold, sans-serif;
+}
+
+footer {
+  color: #e5e5e5;
+  font-size: 0.8rem;
+  font-family: arial;
+}
+
+footer > a {
+  text-decoration: #e5e5e5 underline solid;
+  color: #e5e5e5;
+}
+
+.text-container {
+  margin-top: max(40px, 15%);
+  height: 3rem;
+  width: 100%;
+  padding: 45px;
+  gap: 5px;
+  background: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner > img {
@@ -14,5 +67,88 @@ body {
 }
 
 main {
-  flex: 1 1 0;
+  flex: 1.5 1 0;
+  background: hsl(210deg 20% 98.04%);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+h2 {
+  font: 1.2rem arial;
+  font-weight: bold;
+}
+
+h3 {
+  font: 1rem arial;
+  font-weight: 600;
+}
+
+main > * {
+  margin: 0px 30px;
+}
+
+main > form {
+  margin: 0;
+  padding: 30px 35% 30px 30px;
+  background: white;
+  box-shadow: 3px 0px grey;
+}
+
+ul {
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+ul > li {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2px;
+}
+
+label {
+  color: #2f3846;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+li > input {
+  appearance: none;
+  border: 1px solid #8080802b;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 13px;
+  width: 25ch;
+}
+
+input:focus {
+  outline: none;
+  border: lightblue 1px solid;
+  -webkit-box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.04);
+  box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.04);
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+main > button {
+  border: none;
+  border-radius: 5px;
+  background: #596d48;
+  padding: 17px;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  -webkit-box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.27);
 }
